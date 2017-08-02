@@ -1,4 +1,5 @@
 When to use a bridge pattern 
+----------------------------------
 
 You want to avoid a permanent binding between an abstraction and implementation- especially when implementation may be selected 
 or switched at run time.
