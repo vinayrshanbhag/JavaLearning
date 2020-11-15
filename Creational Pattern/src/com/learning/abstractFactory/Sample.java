@@ -4,20 +4,24 @@ public class Sample {
 	
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 		
-		Computer computerA = new ComputerA();
-		makeComputer(computerA, new ComputerFactoryA());
+		ComputerFactory computerFactoryA = new ComputerFactoryA();
+		Computer computerA = computerFactoryA.createCompter();
+
+		makeComputer(computerA, computerFactoryA);
 		System.out.println(computerA);
-		
-		Computer computerB = new ComputerB();
-		makeComputer(computerB, new ComputerFactoryB());
+
+		ComputerFactory computerFactoryB = new ComputerFactoryB();
+		Computer computerB = computerFactoryB.createCompter();
+		makeComputer(computerB,computerFactoryB);
 		System.out.println(computerB);
-		
-		
-		
 	}
 
 	private static void makeComputer(Computer computer, ComputerFactory computerFactory) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
-	  computer.addCPU((CPU)Class.forName("com.learning.abstractFactory.CPU" + computer.getPartsType()).newInstance());
-	  computer.addMemory((Memory)Class.forName("com.learning.abstractFactory.Memory" + computer.getPartsType()).newInstance());
+	  computer.addCPU(computerFactory.getCPU());
+	  computer.addMemory(computerFactory.getMemory());
+
+	  //If the language provides the reflection capability,
+//	  computer.addCPU((CPU)Class.forName("com.learning.abstractFactory.CPU" + computer.getPartsType()).newInstance());
+//	  computer.addMemory((Memory)Class.forName("com.learning.abstractFactory.Memory" + computer.getPartsType()).newInstance());
   }
 }

@@ -4,4 +4,7 @@
 *.class
 .settings/
 bin/
+/out/
+/.idea/
+*.iml
 
