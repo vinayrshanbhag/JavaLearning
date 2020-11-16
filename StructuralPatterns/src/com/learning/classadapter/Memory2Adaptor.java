@@ -1,4 +1,4 @@
-package com.learning.adaptor1;
+package com.learning.classadapter;
 
 public class Memory2Adaptor extends Memory2 implements Memory {
 
