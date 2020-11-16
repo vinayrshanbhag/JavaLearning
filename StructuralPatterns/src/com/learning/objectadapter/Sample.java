@@ -1,4 +1,4 @@
-package com.learning.adaptor1;
+package com.learning.objectadapter;
 
 public class Sample {
   
@@ -7,7 +7,7 @@ public class Sample {
 		Computer computer = new Computer(new Memory1());
 		computer.work();
 		
-		Computer computer2 = new Computer(new Memory2Adaptor());
+		Computer computer2 = new Computer(new Memory2Adapter(new Memory2()));
 		computer2.work();
 	}
 }
