@@ -11,9 +11,6 @@ public class Sample {
 		SalesExecutive salesExecutive = new SalesExecutive();
 		prepareEmployeeForTravel(salesExecutive);
 		System.out.println(salesExecutive);
-		
-		
-
 	}
 	
 	

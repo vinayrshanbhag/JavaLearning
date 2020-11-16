@@ -4,6 +4,10 @@ public class Computer {
 
 	private Memory _memory;
 
+	private Computer(){
+
+	}
+
 	public Computer(Computer otherComputer) {
 		/*if(otherComputer._memory instanceof Memory1){
 			_memory = new Memory1();
@@ -14,6 +18,12 @@ public class Computer {
 		  */
 		
 		_memory = otherComputer._memory.makeCopy();
+	}
+
+	public Computer makeCopy(Computer otherComputer){
+		Computer newComputer =  new Computer();
+		newComputer._memory = otherComputer._memory.makeCopy();
+		return newComputer;
 	}
 	
 	public Computer(Memory memory) {

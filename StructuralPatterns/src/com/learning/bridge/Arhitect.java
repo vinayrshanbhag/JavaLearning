@@ -1,11 +1,11 @@
 package com.learning.bridge;
 
-public class Arhitect extends Expert{
+public class Arhitect {
 
-	@Override
+	/*@Override
 	public void talk() {
 		get_translator().translate("Let me talk about the evolvind design");
 		
-	}
+	}*/
 
 }

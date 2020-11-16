@@ -1,6 +1,6 @@
 package com.learning.BuilderPattern;
 
-public class CheesePizzaBuilder extends PizzaBuilder {
+public class  CheesePizzaBuilder extends PizzaBuilder {
 
 	@Override
 	public void createCrust() {
